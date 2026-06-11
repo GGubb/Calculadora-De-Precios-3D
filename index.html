@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Impresión 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+
+        <div>
+            <h1>Calculadora de Costos 3D</h1>
+            <p class="subtitulo">Manufactura Aditiva</p>
+        </div>
+    </div>
+
+    <div class="formulario">
+
+        <div class="grupo">
+            <label>Precio del rollo ($)</label>
+            <input type="number" id="precioRollo" value="17000">
+        </div>
+
+        <div class="grupo">
+            <label>Peso del rollo (g)</label>
+            <input type="number" id="pesoRollo" value="1000">
+        </div>
+
+        <div class="grupo">
+            <label>Peso de la pieza (g)</label>
+            <input type="number" id="pesoPieza" value="118">
+        </div>
+
+        <div class="grupo">
+            <label>Horas de impresión</label>
+            <input type="number" id="horas" value="8">
+        </div>
+
+        <div class="grupo">
+            <label>Minutos de impresión</label>
+            <input type="number" id="minutos" value="50">
+        </div>
+
+        <div class="grupo">
+            <label>Consumo impresora (W)</label>
+            <input type="number" id="consumo" value="70">
+        </div>
+
+        <div class="grupo">
+            <label>Tarifa eléctrica ($/kWh)</label>
+            <input type="number" id="tarifa" value="188">
+        </div>
+
+        <div class="grupo">
+            <label>Desperdicio (%)</label>
+            <input type="number" id="desperdicio" value="10">
+        </div>
+
+        <div class="grupo">
+            <label>Precio de venta ($)</label>
+            <input type="number" id="precioVenta" value="7000">
+        </div>
+
+    </div>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultado">
+
+        <h2>Resultados</h2>
+
+        <div class="filaResultado">
+            <span>Material</span>
+            <span id="costoMaterial">$0</span>
+        </div>
+
+        <div class="filaResultado">
+            <span>Electricidad</span>
+            <span id="costoElectricidad">$0</span>
+        </div>
+
+        <div class="filaResultado">
+            <span>Total</span>
+            <span id="costoTotal">$0</span>
+        </div>
+
+        <hr>
+
+        <div class="filaResultado">
+            <span>Ganancia</span>
+            <span id="ganancia">$0</span>
+        </div>
+
+        <div class="filaResultado">
+            <span>Margen</span>
+            <span id="margen">0%</span>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
